@@ -1,0 +1,183 @@
+/* this is the css for Eric's To-do list 
+   100869527    10/23/23
+*/
+
+* { 
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gabarito', sans-serif;
+  z-index: 2;
+  transition: 0.5s;
+}
+.uil-draggabledots:before{
+  font-style: normal;
+  font-weight:bolder;
+  font-size: 28px;
+  content:'\22ee\22ee';
+
+}
+#New-button{
+  background-image: url('images/NewIcon.png');
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position-y: 0px;
+  background-position-x: center;
+  background-color: #ffffff;
+  width: 100px;
+  height: 70px;
+  border: 1px #011011 solid;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+#Sort-button{
+    background-image: url('images/SortIcon.jpg');
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 70px;
+    border: 1px #011011 solid;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.title{
+  font-weight: bold;
+  font-size: 24px;
+  width: 400px;
+}
+input{
+  border-radius: 6px;
+  padding: 3px;
+  font-size: 16px;
+  background-color: #fff7f8;
+}
+.title-bar{
+  background: linear-gradient(to top, #242936, #1f2840);
+  color: #fff7f8;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 520px;
+  z-index: 3;
+}
+ 
+.removeButton{
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+h1{
+  margin-top: -10px;
+  font-size: 70px;
+}
+body {
+  display: flex;
+  align-items: top;
+  justify-content: left;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #00cf26, #71dcc7, #07beb8, #053397, #00cf26, #71dcc7, #07beb8);
+	background-size: 400% 400%;
+  animation: backgroundColorChange 20s linear infinite;
+}
+.nav-button{
+  padding: 10px;
+  text-align: right;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px rgb(44, 44, 44) solid;
+  border-radius: 20px;
+}
+.checkbox {
+ margin: 5px;
+ margin-right: 20px;
+ width: 35px;
+ height: 35px;
+}
+.sortable-list {
+  width:98%;
+  margin: 1%;
+  margin-top: 102px;
+  min-width: 490px;
+  padding: 25px;
+  background: linear-gradient(to bottom, #fff4f5, #ebebfb);
+  border-radius: 7px;
+  padding: 30px 25px 20px;
+  opacity: 0.95;
+  /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); */
+}
+.sortable-list .item {
+  list-style: none;
+  display: flex;
+  cursor: move;
+  background: #fff7f8;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 13px;
+  margin-bottom: 11px;
+  height: 75px;
+  border: 1px solid #ccc;
+  justify-content: space-between;
+  transition: transform 0.5s ease-in-out;
+}
+.sortable-list .item:hover {
+  transform: scaleY(1.02) scaleX(1.005);
+  box-shadow: inset 0 0 1000px 100px rgba(255, 255, 255, 0.2);
+}
+.priority-Low{
+  background-color: #b3ccff;
+}
+.priority-Mid{
+  background-color: #ffe96c;
+}
+.priority-High{
+  background-color: #ff5e5e;
+}
+.item .details {
+  display: flex;
+  align-items: center;
+}
+.item.dragging {
+  opacity: 0.6;
+}
+.item.dragging :where(.details, i) {
+  opacity: 0.1;
+}
+
+#low{
+  background-color: #5982d5;
+}
+#mid{
+  background-color: #f0a202;
+}
+#high{
+  background-color: #ff0000;
+}
+#done{
+  background-color: #6febab;
+  opacity: 0.5;
+  z-index: 3;
+}
+
+.priority-Thing button {
+  font-size: 24px;
+  padding: 4px;
+  width: 65px;
+  border-radius: 15px;
+} 
+
+@keyframes backgroundColorChange{
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 90% 86%;
+	}
+}
